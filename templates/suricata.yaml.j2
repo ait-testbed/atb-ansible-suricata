@@ -98,6 +98,12 @@ outputs:
       #  pipelining:
       #    enabled: yes ## set enable to yes to enable query pipelining
       #    batch-size: 10 ## number of entry to keep in buffer
+
+      # enable/disable the community id feature.
+      community-id: true
+      # Seed value for the ID output. Valid values are 0-65535.
+      community-id-seed: 0
+      
       types:
         - alert:
             # payload: yes             # enable dumping payload in Base64
