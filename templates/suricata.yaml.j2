@@ -100,9 +100,9 @@ outputs:
       #    batch-size: 10 ## number of entry to keep in buffer
 
       # enable/disable the community id feature.
-      community-id: true
+      community-id: {{ community_id_enabled }} 
       # Seed value for the ID output. Valid values are 0-65535.
-      community-id-seed: 0
+      community-id-seed: {{ community_id_seed }}
       
       types:
         - alert:
