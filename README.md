@@ -38,6 +38,9 @@ suricata_tpl: "suricata.yaml.j2"
 | suricata_log_dir               | path         | /var/log/suricata/                        | The default suricata log directory                       |
 | suricata_threshold             | list[dict]   | []                                        | The rules for the treshold.config                        |
 | suricata_update_rules          | list[string] |                                           | List of suricata update rules to enable                  |
+| community_id_enabled           | bool         | true                                      | If suricata should use a community id for flows          |
+| community_id_seed              | int          | 0                                         | Seed for community id                                    |
+| netflow_enabled                | bool         | false                                     | If suricata should generate netflow records              |
 
 ### \*1
 
