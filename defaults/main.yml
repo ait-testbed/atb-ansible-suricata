@@ -118,7 +118,8 @@ suricata_rule_files:
   #     - dns-events.rules     # available in suricata sources under rules dir
   #     - tls-events.rules     # available in suricata sources under rules dir
 
-  # community id
+# community id
 community_id_enabled: "{{ community_id_enabled | default(true) }}"  
 community_id_seed: "{{ community_id_seed | default(0) }}"  
+# netflow
 netflow_enabled: "{{ netflow_enabled | default(false) }}"
