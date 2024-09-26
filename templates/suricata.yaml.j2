@@ -98,6 +98,12 @@ outputs:
       #  pipelining:
       #    enabled: yes ## set enable to yes to enable query pipelining
       #    batch-size: 10 ## number of entry to keep in buffer
+
+      # enable/disable the community id feature.
+      community-id: {{ community_id_enabled }} 
+      # Seed value for the ID output. Valid values are 0-65535.
+      community-id-seed: {{ community_id_seed }}
+      
       types:
         - alert:
             # payload: yes             # enable dumping payload in Base64
@@ -176,7 +182,9 @@ outputs:
         # bi-directional flows
         - flow
         # uni-directional flows
-        #- netflow
+        {% if netflow_enabled %}
+        - netflow
+        {% endif %}
         #- dnp3
 
   # alert output for use with Barnyard2
