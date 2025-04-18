@@ -31,8 +31,6 @@ suricata_threshold: []
 
 suricata_update_rules:
   - et/open
-  - tgreen/hunting
-  - malsilo/win-malware
   - stamus/lateral
 
 # address and port groups
