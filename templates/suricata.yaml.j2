@@ -182,9 +182,9 @@ outputs:
         # bi-directional flows
         - flow
         # uni-directional flows
-        {% if netflow_enabled %}
+{% if netflow_enabled %}
         - netflow
-        {% endif %}
+{% endif %}
         #- dnp3
 
   # alert output for use with Barnyard2
